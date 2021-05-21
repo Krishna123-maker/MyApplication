@@ -198,6 +198,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/gender">
 
                 <AutoCompleteTextView
+                    android:id="@+id/autoComplete_gender"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

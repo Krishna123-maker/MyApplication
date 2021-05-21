@@ -24,12 +24,5 @@
     <string name="department">Department</string>
     <string name="vehicle">Vehicle</string>
     <string name="vehicle_number">Vehicle Number</string>
-    
-    
-    <string-array name="gender">
-        <item>Please Select</item>
-        <item>Male</item>
-        <item>Female</item>
-        <item>None</item>
-    </string-array>
+
 </resources>
