@@ -10,8 +10,6 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-
-
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,8 +20,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     ///Buttons
+
         //AMBULANCE
-    public Button button;
+    public Button btn_ambulance;
+    public Button btn_blood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +31,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         //Ambulance Button
-        button = (Button) findViewById(R.id.btn_ambulance);
-        button.setOnClickListener(new View.OnClickListener() {
+        btn_ambulance = (Button) findViewById(R.id.btn_ambulance);
+        btn_ambulance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ambulance.class);
                 startActivity(intent);
-
             }
         });
 
+        /// Blood
+        btn_blood= (Button) findViewById(R.id.btn_blood);
+        btn_blood.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_blood.class);
+
+            }
+
+
+        });
         /*---------Hooks-------*/
 
         drawerLayout=findViewById(R.id.drawer_layout);
@@ -52,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
         /*--------Navigation Drawer Menu--*/
+
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);

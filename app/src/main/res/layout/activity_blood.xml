@@ -407,76 +407,37 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="15dp"
-                android:text="@string/vehicle"
+                android:text="Blood Group"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/state" />
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/vehicle_name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_blood"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="6dp"
-                    android:ellipsize="middle"
-                    android:fontFamily="sans-serif"
-                    android:hint="@string/vehicle_name"
-                    android:inputType="text"
-                    android:textSize="16sp"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="50dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    app:hintEnabled="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/vehicle_number"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vehicle_name" />
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/vehicle_number"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15">
+                    <AutoCompleteTextView
+                        android:id="@+id/autoComplete_bloodgroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:fontFamily="sans-serif"
+                        android:inputType="none"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="6dp"
+                        android:text="Select Your Blood Group" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="6dp"
-                    android:ellipsize="middle"
-                    android:fontFamily="sans-serif"
-                    android:hint="@string/vehicle_number"
-                    android:inputType="text"
-                    android:textSize="16sp"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
 
 
             <TextView
@@ -490,7 +451,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vehicle_number" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_blood" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email"
