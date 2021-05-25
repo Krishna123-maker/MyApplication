@@ -21,8 +21,8 @@ public class ambulance extends AppCompatActivity {
     private TextInputLayout textInputLayout_gender;
     private AutoCompleteTextView dropDownText_gender;
 
-    private TextInputLayout textInputLayout_department;
-    private AutoCompleteTextView dropDownText_department;
+    private TextInputLayout textInputLayout_vehicletype;
+    private AutoCompleteTextView dropDownText_vehicletype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +105,16 @@ public class ambulance extends AppCompatActivity {
                 gender
         );
         dropDownText_gender.setAdapter(genderadapter);
+
+        dropDownText_vehicletype=findViewById(R.id.autoComplete_vehicleType);
+        textInputLayout_vehicletype=findViewById(R.id.textInputLayout_vehicletype);
+        String[] vehicleTypes= new String[]{
+                "Please Select",
+                "Ambulance",
+                "Private"
+        };
+        ArrayAdapter<String> vehicleadapter= new ArrayAdapter<>(ambulance.this,R.layout.vehicle_items,vehicleTypes);
+        dropDownText_vehicletype.setAdapter(vehicleadapter);
 
 
     }

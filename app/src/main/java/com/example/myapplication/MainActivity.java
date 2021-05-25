@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //AMBULANCE
     public Button btn_ambulance;
     public Button btn_blood;
+    public Button btn_money;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +47,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity_blood.class);
+                Intent bloodintent = new Intent(MainActivity.this, Activity_blood.class);
 
             }
 
 
+        });
+
+        btn_money=(Button) findViewById(R.id.btn_money);
+        btn_money.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moneyintent = new Intent(MainActivity.this,activity_money.class);
+            }
         });
         /*---------Hooks-------*/
 

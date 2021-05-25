@@ -26,5 +26,6 @@
     <string name="vehicle_number">Vehicle Number</string>
     <string name="vehicle_name">Vehicle Name</string>
     <string name="additional_comment">Additional Comment</string>
+    <string name="vehicle_type">Vehicle Type</string>
 
 </resources>

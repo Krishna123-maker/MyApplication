@@ -28,7 +28,7 @@ public class Activity_home extends AppCompatActivity {
         helper.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent helperintent = new Intent(Activity_home.this,ambulance.class);
+                Intent helperintent = new Intent(Activity_home.this,MainActivity.class);
                 startActivity(helperintent);
             }
 
