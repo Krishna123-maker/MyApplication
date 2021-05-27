@@ -9,7 +9,7 @@
     tools:context=".MainActivity"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="end">
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -95,13 +95,13 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/btn_ambulance"
+                        android:id="@+id/btn_transport"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/ambulanceicon"
                         android:layout_centerHorizontal="true"
-                        android:text="Ambulance"
+                        android:text="Transport"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:backgroundTint="@color/white" />
@@ -132,23 +132,23 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/btn_patient"
+                        android:id="@+id/btn_blood"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/patienticon"
+                        android:layout_below="@id/bloodicon"
                         android:layout_centerHorizontal="true"
-                        android:text="PATIENT"
+                        android:text="BLOOD"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:backgroundTint="@color/white" />
 
                     <ImageView
-                        android:id="@+id/patienticon"
+                        android:id="@+id/bloodicon"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:layout_centerHorizontal="true"
-                        app:srcCompat="@drawable/patient" />
+                        app:srcCompat="@drawable/blood" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -181,23 +181,27 @@
                     android:clickable="true">
 
                     <Button
-                        android:id="@+id/btn_hospital"
+                        android:id="@+id/btn_money"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/hospital"
+                        android:layout_below="@id/moneyicon"
                         android:layout_centerHorizontal="true"
-                        android:text="Hospital"
+                        android:text="@string/money"
                         android:textColor="@color/black"
                         android:textSize="20sp"
-                        app:backgroundTint="@color/white" />
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/white"
+                        app:rippleColor="@color/white" />
 
                     <ImageView
-                        android:id="@+id/hospital"
+                        android:id="@+id/moneyicon"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:layout_centerHorizontal="true"
-                        app:srcCompat="@drawable/hospital" />
+                        app:srcCompat="@drawable/money" />
+
+
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -217,24 +221,29 @@
                     android:layout_height="match_parent"
                     android:clickable="true">
 
-                    <Button
-                        android:id="@+id/btn_blood"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/bloodicon"
-                        android:layout_centerHorizontal="true"
-                        android:text="BLOOD"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        app:backgroundTint="@color/white" />
-
                     <ImageView
-                        android:id="@+id/bloodicon"
+                        android:id="@+id/clothesicon"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:layout_centerHorizontal="true"
-                        app:srcCompat="@drawable/blood" />
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/clothes" />
+
+                    <Button
+                        android:id="@+id/btn_clothes"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/clothesicon"
+                        android:layout_centerHorizontal="true"
+                        android:text="Clothes"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/white"
+                        app:rippleColor="@color/white" />
+
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -298,100 +307,10 @@
                 tools:layout_editor_absoluteX="-178dp"
                 tools:layout_editor_absoluteY="333dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clickable="true">
-
-                    <ImageView
-                        android:id="@+id/clothesicon"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        app:srcCompat="@drawable/clothes" />
-
-                    <Button
-                        android:id="@+id/btn_clothes"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/clothesicon"
-                        android:layout_centerHorizontal="true"
-                        android:text="Clothes"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        app:backgroundTint="@color/white"
-                        app:iconTint="@color/white"
-                        app:rippleColor="@color/white" />
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:layout_marginTop="720dp"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:cardElevation="5dp"
-                tools:layout_editor_absoluteX="-178dp"
-                tools:layout_editor_absoluteY="333dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/btn_money"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/moneyicon"
-                        android:layout_centerHorizontal="true"
-                        android:text="MONEY"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        app:backgroundTint="@color/white"
-                        app:iconTint="@color/white"
-                        app:rippleColor="@color/white" />
-
-                    <ImageView
-                        android:id="@+id/moneyicon"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:layout_centerHorizontal="true"
-                        app:srcCompat="@drawable/money" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:cardElevation="5dp"
-                tools:layout_editor_absoluteX="-178dp"
-                tools:layout_editor_absoluteY="333dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clickable="true" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

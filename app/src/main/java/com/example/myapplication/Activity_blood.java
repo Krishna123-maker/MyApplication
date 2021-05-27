@@ -32,7 +32,7 @@ public class Activity_blood extends AppCompatActivity {
         };
 
         ArrayAdapter<String> bloodadapter=new ArrayAdapter<>(Activity_blood.this,
-                R.layout.activity_blood,
+                R.layout.blood_items,
                 blood_group
         );
         dropDownText_blood.setAdapter(bloodadapter);

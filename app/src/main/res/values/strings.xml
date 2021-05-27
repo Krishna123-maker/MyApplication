@@ -27,5 +27,7 @@
     <string name="vehicle_name">Vehicle Name</string>
     <string name="additional_comment">Additional Comment</string>
     <string name="vehicle_type">Vehicle Type</string>
+    <string name="money">MONEY</string>
+    <string name="blood_group">Blood Group</string>
 
 </resources>

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".activity_money"></activity>
+        <activity android:name=".food"></activity>
+        <activity android:name=".clothes" />
+        <activity android:name=".activity_money" />
         <activity android:name=".Activity_blood" />
         <activity android:name=".Activity_home">
             <intent-filter>

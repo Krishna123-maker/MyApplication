@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ///Buttons
 
         //AMBULANCE
-    public Button btn_ambulance;
+    public Button btn_transport;
     public Button btn_blood;
     public Button btn_money;
 
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         //Ambulance Button
-        btn_ambulance = (Button) findViewById(R.id.btn_ambulance);
-        btn_ambulance.setOnClickListener(new View.OnClickListener() {
+        btn_transport = (Button) findViewById(R.id.btn_transport);
+        btn_transport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ambulance.class);
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             @Override
             public void onClick(View v) {
-                Intent bloodintent = new Intent(MainActivity.this, Activity_blood.class);
+                Intent blood_intent = new Intent(MainActivity.this, Activity_blood.class);
+                startActivity(blood_intent);
 
             }
 
@@ -58,7 +60,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btn_money.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent moneyintent = new Intent(MainActivity.this,activity_money.class);
+                Intent money_intent = new Intent(MainActivity.this,activity_money.class);
+                startActivity(money_intent);
             }
         });
         /*---------Hooks-------*/
